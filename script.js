@@ -88,8 +88,8 @@ function SetSize(){
     else if(clickedsize.innerText === "5x5"){
         rows = 5;
         cols = 5;
-        //board = Array.from({ length: 5 }, () => Array(5).fill(0));
-        board = [[2,4,8,16,32],[64,128,256,512,1024],[2048,4096,8192,16384, 32768],[65536, 131072, 262144, 524288, 1048576], [0,0,0,0,0]];
+        board = Array.from({ length: 5 }, () => Array(5).fill(0));
+        //board = [[2,4,8,16,32],[64,128,256,512,1024],[2048,4096,8192,16384, 32768],[65536, 131072, 262144, 524288, 1048576], [0,0,0,0,0]];
         gameboard.style.width = "498px";
         gameboard.style.height = "498px";
     }
@@ -179,7 +179,6 @@ document.addEventListener("keyup", (e) =>{
         StartTime();
         time = 1;
     }
-    console.log(nomove);
     if (nomove === 4){
         keyupEnabled = false;
         const reset = document.querySelector(".reset");
@@ -279,7 +278,6 @@ document.addEventListener("keyup", (e) =>{
         time = 0;
         StopTime();
     }
-    console.log(names3);    
 })
 
 function SlideLeft(){
