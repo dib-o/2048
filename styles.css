@@ -1,0 +1,291 @@
+/* Classic */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+/* Roman Numerals */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+/* Candy */
+@import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap');
+/* Classic */
+@import url('https://fonts.googleapis.com/css2?family=Anaheim:wght@400..800&display=swap');
+/* Title */
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+.cinzel{
+    font-family: "Cinzel", serif;
+}
+
+:root{
+    --color1: #bbada0;
+    --color2: black;
+    --font: "Quicksand", sans-serif;
+    --size: rgb(199, 206, 213);
+    --gold: #FFD700;
+    --silver: #C0C0C0;
+    --bronze: #CD7F32;
+    --x1: #eee4da;
+    --x2: #ede0c8; 
+    --x3: #f2b179;
+    --x4: #f59563;
+    --x5: #f67c5f;
+    --x6: #f65e3b;
+    --x7: #edcf72;
+    --x8: #edcc61;
+    --x9: #edc850;
+    --x10: #edc53f;
+    --x11: #edc22e;
+    --x12: #3c3a32;
+    --x13: #ff0000;
+}
+
+body{
+    font-family: var(--font);
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+    margin: 0;
+}
+
+hr{
+    width: 500px;
+}
+#gametitle{
+    font-family: "Bungee", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+}
+#gamebackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.2); /* optional tint */
+    z-index: 0;
+}
+#gameboard{
+    width: 399px;
+    height: 400px;
+    margin: 0 auto;
+
+    background: var(--color1);
+    border: 5px solid var(--color2);
+
+    display: flex;
+    flex-wrap: wrap;
+}
+#gameoptions{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+#gameover{
+    font-family: "Anaheim", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 25px;
+    position: absolute;
+    width: 150px;
+    height: 80px;
+    background: Yellow;
+    border: 2px solid black;
+    justify-content: center;
+    align-content: center;
+    top: 45%;
+    left: 45%;
+    cursor: pointer;
+}
+.size, .reset{
+    border: 2px solid black;
+    width: 50px;
+    height: 30px;
+    align-content: center;
+    font-family: "Anaheim", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    background: var(--size);
+    cursor: pointer;
+}
+.size:hover, .reset:hover{
+    box-shadow: 0 4px 8px gray;
+}
+.size.clicked {
+    box-shadow: 0 4px 8px black;
+}
+.gametile {
+    width: 90px;
+    height: 90px;
+    border: 5px solid var(--color2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 40px;
+    color: white;
+    text-shadow: 
+    0 0 5px black, 
+    0 0 10px black;
+}
+
+#gamebody{
+    display: flex;
+    flex-direction: row;
+    gap: 105px;
+    justify-content: center;
+}
+#gamescoreboard, #gamestyle{
+    width: 300px;
+    height: auto;
+    border: 2px solid black;
+    border-bottom: none;
+    margin-top: 130px;
+}
+.topscores, #contenttitle{
+    font-family: "Anaheim", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+.mode{
+    font-size: 30px;
+    color: white;
+    text-shadow: 
+    0 0 5px black, 
+    0 0 10px black;
+    background: black;
+}
+.rank{
+    color: white;
+    text-shadow: 
+    0 0 5px black, 
+    0 0 10px black;
+    height: 30px;
+    border-bottom: 2px solid black;
+    font-size: 15px;
+    align-content: center;
+    text-align: center;
+    padding-left: 10px;
+    white-space: pre;
+}
+.gold{
+    background: var(--gold);
+}
+.silver{
+    background: var(--silver);
+}
+.bronze{
+    background: var(--bronze);
+}
+#details{
+    font-family: "Anaheim", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    gap: 15px;
+}
+.summary{
+    font-size: 20px;
+    margin: 15px 0px;
+}
+#username{
+    font-family: "Anaheim", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    width: 100px;
+    border: 2px solid black;
+}
+#contenttitle{
+    color: black;
+    text-shadow: 
+    0 0 5px black, 
+    0 0 10px black;
+    background: white;
+    font-size: 30px;
+    border-bottom: 2px solid black;
+}
+#content{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 2px solid black;
+    height: auto;
+    justify-content: center;
+    background: black;
+}
+.texture{
+    width: 80px;
+    border: 2px solid black;
+    height: 50px;
+    align-content: center;
+    cursor: pointer;
+    font-size: 18px;
+}
+#Roman{
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    background: linear-gradient(135deg, #d4af37, #a9a9a9, #f5f5f5, #8b7d6b, #d4af37);
+}
+#Classic{
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    background: linear-gradient(135deg, #f9e175, #edc22e, #e5af15, #edc22e, #f9e175);
+}
+#Candy{
+    font-family: "Emilys Candy", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    background: #FFB6C1;
+}
+.x2{
+    background: var(--x1);
+}
+.x4{
+    background: var(--x2);
+}
+.x8{
+    background: var(--x3);
+}
+.x16{
+    background: var(--x4);
+}
+.x32{
+    background: var(--x5);
+}
+.x64{
+    background: var(--x6);
+}
+.x128{
+    background: var(--x7);
+}
+.x256{
+    background: var(--x8);
+}
+.x512{
+    background: var(--x9);
+}
+.x1024{
+    background: var(--x10);
+}
+.x2048{
+    background: var(--x11);
+}
+.x4096{
+    background: var(--x12);
+}
+.x8192{
+    background: var(--x13);
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale:1.0">
+        <title>Game</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="gamebackground" style="display: none;"></div>
+        <div id="gamebody">
+            <div class="part">
+                <div id="gamestyle">
+                    <div id="contenttitle">GAME STYLE</div>
+                    <div id="content">
+                        <div class="texture" id="Classic" onclick="ClassicStyle()">Classic</div>
+                        <div class="texture" id="Roman" onclick="RomanStyle()">Roman</div>
+                        <div class="texture" id="Candy" onclick="CandyStyle()">Candy</div>
+                    </div>
+                </div>
+            </div>
+            <div class="part">
+                <div id="gametitle">2048</div>
+                <hr>
+                <div id="gameoptions">
+                    <div class="size">3x3</div>
+                    <div class="size clicked">4x4</div>
+                    <div class="size">5x5</div>
+                    <div class="reset" onclick="ResetGame()">Reset</div>
+                </div>
+                <hr>
+                <div id="details">
+                    <div class="summary">
+                        Name: <input type="text" id="username" placeholder="Enter name...">
+                    </div>
+                    <div class="summary">
+                        Score: <span id="score">0</span>
+                    </div>
+                    <div class="summary">
+                        Time: <span id="time">00:00:00</span>
+                    </div>
+                </div><br>
+                <div id="gameboard">
+                </div>
+                <div id="gameover" onclick="GameStop()" style="display: none;">
+                    TRY AGAIN!!!<br>
+                    <span style="font-size: 13px;">(click here)</span><br>
+                    <span style="font-size: 13px; margin-top: -25px;">SCORE: <span id="finalscore">0</span></span>
+                </div>
+            </div>
+            <div class="part">
+                <div id="gamescoreboard">
+                    <div class="topscores">
+                        <div class="mode" style="background:white;color:black;">HIGH SCORES</div>
+                        <div class="mode">3X3</div>
+                        <div class="rank gold g3x3">1</div>
+                        <div class="rank silver s3x3">2</div>
+                        <div class="rank bronze b3x3">3</div>
+                    </div>
+                    <br>
+                    <div class="topscores">
+                        <div class="mode">4X4</div>
+                        <div class="rank gold g4x4">1</div>
+                        <div class="rank silver s4x4">2</div>
+                        <div class="rank bronze b4x4">3</div>
+                    </div>
+                    <br>
+                    <div class="topscores">
+                        <div class="mode">5X5</div>
+                        <div class="rank gold g5x5">1</div>
+                        <div class="rank silver s5x5">2</div>
+                        <div class="rank bronze b5x5">3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <script src="script.js">
+        </script>          
+    </body>
+</html>
